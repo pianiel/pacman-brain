@@ -18,7 +18,8 @@ class IdentityExtractor(FeatureExtractor):
     feats[(state,action)] = 1.0
     return feats
 
-def closestFood(pos, food, walls):
+
+def closestFood(pos, food, walls, withPos=False):
   """
   closestFood -- this is similar to the function that we have
   worked on in the search project; here its all in one place
@@ -32,6 +33,8 @@ def closestFood(pos, food, walls):
     expanded.add((pos_x, pos_y))
     # if we find a food at this location then exit
     if food[pos_x][pos_y]:
+      if withPos:
+        return (pos_x, pos_y), dist
       return dist
     # otherwise spread out from the location to its neighbours
     nbrs = Actions.getLegalNeighbors((pos_x, pos_y), walls)
@@ -39,6 +42,7 @@ def closestFood(pos, food, walls):
       fringe.append((nbr_x, nbr_y, dist+1))
   # no food found
   return None
+
 
 class SimpleExtractor(FeatureExtractor):
   """

@@ -31,10 +31,56 @@ class QLearningAgent(ReinforcementAgent):
 
     "*** YOUR CODE HERE ***"
     self.Q = {}
+    # self.ext = SimpleExtractor()
+
+  def getThingDirection(self, p1, p2):
+    x, y = p2[0]-p1[0], p2[1]-p1[1]
+    if y > x:
+        if y > -x:
+            return Directions.NORTH
+        else:
+            return Directions.WEST
+    else:
+        if y > -x:
+            return Directions.EAST
+        else:
+            return Directions.SOUTH
+
+    return
+
+  def closestGhost(self, state):
+    pos = state.getPacmanPosition()
+    gpositions = state.getGhostPositions()
+    gdists = [util.manhattanDistance(pos, gpos) for gpos in gpositions]
+    idx, closestGhostDist = min(enumerate(gdists), key=lambda p: p[1])
+    if closestGhostDist > 4.5:
+        closestGhostDist = 'Far'
+    # closestGhostDir = 0 # f(pos, gpositions[idx])
+    return gpositions[idx], closestGhostDist
 
   def getSimplifiedState(self, state):
     #TODO
-    return state
+    remainingFood = state.getNumFood()
+    pos = state.getPacmanPosition()
+    cfood = closestFood(pos, state.getFood(), state.getWalls(), withPos=True)
+    if cfood is None:
+        closestFoodDist = None
+        closestFoodDir = None
+    else:
+        closestFoodDist = cfood[1]
+        closestFoodDir = self.getThingDirection(pos, cfood[0])
+        if closestFoodDist > 4.5:
+            closestFoodDir = 'Far'
+    cghost = self.closestGhost(state)
+    if cghost is None:
+        closestGhostDist = None
+        closestGhostDir = None
+    else:
+        closestGhostDist = cghost[1]
+        closestGhostDir = self.getThingDirection(pos, cghost[0])
+    result = (remainingFood, closestFoodDist, 'foodOn:', closestFoodDir, closestGhostDist, 'ghostOn:', closestGhostDir, 'goOn:')
+    return result
+    # return self.ext.getFeatures(state, action)
 
   def getQValue(self, state, action):
     """
