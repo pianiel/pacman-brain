@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8ea0de8-9e38-4a59-bb05-630f92c3df89" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/featureExtractors.py" afterPath="$PROJECT_DIR$/featureExtractors.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman.py" afterPath="$PROJECT_DIR$/pacman.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qlearningAgents.py" afterPath="$PROJECT_DIR$/qlearningAgents.py" />
     </list>
     <ignored path="pacman-brain.iws" />
@@ -30,7 +28,7 @@
       <file leaf-file-name="pacman.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pacman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="625" column="49" selection-start="22482" selection-end="22482" vertical-scroll-proportion="0.0" vertical-offset="8725" max-vertical-offset="9765">
+            <state line="607" column="14" selection-start="21574" selection-end="21574" vertical-scroll-proportion="0.0" vertical-offset="8500" max-vertical-offset="9765">
               <folding>
                 <element signature="e#1329#1359#0" expanded="true" />
               </folding>
@@ -41,7 +39,7 @@
       <file leaf-file-name="q.log" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/q.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="757" column="0" selection-start="63229" selection-end="63229" vertical-scroll-proportion="0.0" vertical-offset="10601" max-vertical-offset="11445">
+            <state line="9083" column="0" selection-start="760850" selection-end="760850" vertical-scroll-proportion="0.0" vertical-offset="135491" max-vertical-offset="136335">
               <folding />
             </state>
           </provider>
@@ -50,10 +48,10 @@
       <file leaf-file-name="qlearningAgents.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/qlearningAgents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="36" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.33212996" vertical-offset="624" max-vertical-offset="2985">
+            <state line="61" column="0" selection-start="1594" selection-end="1594" vertical-scroll-proportion="1.101083" vertical-offset="0" max-vertical-offset="3000">
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#6269#7414#0" expanded="false" />
+                <element signature="e#6317#7462#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -212,7 +210,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.learning pacman 1000times smallgrid">
+  <component name="RunManager" selected="Python.learning pacman 4000times smallClassic">
     <configuration default="false" name="manual pacman" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -406,7 +404,9 @@
       <module name="pacman-brain" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pacman.py" />
       <option name="PARAMETERS" value="-p PacmanQAgent -x 2000 -n 2007 -l smallClassic" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -464,14 +464,33 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="7">
+    <configuration default="false" name="learning pacman 4000times smallClassic" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pacman-brain" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pacman.py" />
+      <option name="PARAMETERS" value="-p PacmanQAgent -x 4000 -n 4015 -l smallClassic" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Python.learning pacman 1000times smallgrid" />
       <item index="1" class="java.lang.String" itemvalue="Python.learning pacman 20 trains" />
       <item index="2" class="java.lang.String" itemvalue="Python.learning pacman 2000times smallClassic" />
       <item index="3" class="java.lang.String" itemvalue="Python.learning pacman 2000times testClassic" />
       <item index="4" class="java.lang.String" itemvalue="Python.learning pacman 2000times smallgrid" />
       <item index="5" class="java.lang.String" itemvalue="Python.learning pacman 2000times smallClassic 1 ghost" />
-      <item index="6" class="java.lang.String" itemvalue="Python.manual pacman" />
+      <item index="6" class="java.lang.String" itemvalue="Python.learning pacman 4000times smallClassic" />
+      <item index="7" class="java.lang.String" itemvalue="Python.manual pacman" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -526,14 +545,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/pacman.py</url>
-          <line>615</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -561,15 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pacman.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="625" column="49" selection-start="22482" selection-end="22482" vertical-scroll-proportion="0.0" vertical-offset="8725" max-vertical-offset="9765">
-          <folding>
-            <element signature="e#1329#1359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="2" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="6345">
@@ -592,17 +595,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/q.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="757" column="0" selection-start="63229" selection-end="63229" vertical-scroll-proportion="0.0" vertical-offset="10601" max-vertical-offset="11445">
+        <state line="9083" column="0" selection-start="760850" selection-end="760850" vertical-scroll-proportion="0.0" vertical-offset="135491" max-vertical-offset="136335">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pacman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="607" column="14" selection-start="21574" selection-end="21574" vertical-scroll-proportion="0.0" vertical-offset="8500" max-vertical-offset="9765">
+          <folding>
+            <element signature="e#1329#1359#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/qlearningAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="36" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.33212996" vertical-offset="624" max-vertical-offset="2985">
+        <state line="61" column="0" selection-start="1594" selection-end="1594" vertical-scroll-proportion="1.101083" vertical-offset="0" max-vertical-offset="3000">
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#6269#7414#0" expanded="false" />
+            <element signature="e#6317#7462#0" expanded="false" />
           </folding>
         </state>
       </provider>

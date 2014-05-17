@@ -53,14 +53,15 @@ class QLearningAgent(ReinforcementAgent):
     gpositions = state.getGhostPositions()
     gdists = [util.manhattanDistance(pos, gpos) for gpos in gpositions]
     idx, closestGhostDist = min(enumerate(gdists), key=lambda p: p[1])
-    if closestGhostDist > 4.5:
+    if closestGhostDist > 4.4:
         closestGhostDist = 'Far'
     # closestGhostDir = 0 # f(pos, gpositions[idx])
     return gpositions[idx], closestGhostDist
 
   def getSimplifiedState(self, state):
-    #TODO
     remainingFood = state.getNumFood()
+    if remainingFood > 10:
+        remainingFood = "ALOT"
     pos = state.getPacmanPosition()
     cfood = closestFood(pos, state.getFood(), state.getWalls(), withPos=True)
     if cfood is None:
