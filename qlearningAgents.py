@@ -3,7 +3,7 @@ from learningAgents import ReinforcementAgent
 from featureExtractors import *
 
 import random,util,math
-          
+         
 class QLearningAgent(ReinforcementAgent):
   """
     Q-Learning Agent
@@ -31,7 +31,11 @@ class QLearningAgent(ReinforcementAgent):
 
     "*** YOUR CODE HERE ***"
     self.Q = {}
-  
+
+  def getSimplifiedState(self, state):
+    #TODO
+    return state
+
   def getQValue(self, state, action):
     """
       Returns Q(state,action)    
@@ -39,9 +43,10 @@ class QLearningAgent(ReinforcementAgent):
       a state or (state,action) tuple 
     """
     "*** YOUR CODE HERE ***"
-    if (state, action) not in self.Q:
+    simplified_state = self.getSimplifiedState(state)
+    if (simplified_state, action) not in self.Q:
         return 0.0
-    return self.Q[(state, action)]
+    return self.Q[(simplified_state, action)]
     
   def getValue(self, state):
     """
@@ -106,7 +111,7 @@ class QLearningAgent(ReinforcementAgent):
       it will be called on your behalf
     """
     "*** YOUR CODE HERE ***"
-    self.Q[(state, action)] = self.getQValue(state, action) + self.alpha * (reward + self.gamma * self.getValue(nextState) - self.getQValue(state, action))
+    self.Q[(self.getSimplifiedState(state), action)] = self.getQValue(state, action) + self.alpha * (reward + self.gamma * self.getValue(nextState) - self.getQValue(state, action))
     
 class PacmanQAgent(QLearningAgent):
   "Exactly the same as QLearningAgent, but with different default parameters"
