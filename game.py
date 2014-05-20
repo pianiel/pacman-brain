@@ -264,6 +264,8 @@ def reconstituteGrid(bitRep):
 # Parts you shouldn't have to read #
 ####################################
 
+neighborsCache = {}
+
 class Actions:
   """
   A collection of static methods for manipulating move actions.
@@ -329,6 +331,12 @@ class Actions:
   getPossibleActions = staticmethod(getPossibleActions)
 
   def getLegalNeighbors(position, walls):
+
+    global neighborsCache
+
+    if (position in neighborsCache):
+        return neighborsCache[position]
+
     x,y = position
     x_int, y_int = int(x + 0.5), int(y + 0.5)
     neighbors = []
@@ -339,6 +347,9 @@ class Actions:
       next_y = y_int + dy
       if next_y < 0 or next_y == walls.height: continue
       if not walls[next_x][next_y]: neighbors.append((next_x, next_y))
+
+    neighborsCache[position] = neighbors
+
     return neighbors
   getLegalNeighbors = staticmethod(getLegalNeighbors)
 

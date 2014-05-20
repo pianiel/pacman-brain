@@ -33,55 +33,7 @@ class QLearningAgent(ReinforcementAgent):
     self.Q = {}
     # self.ext = SimpleExtractor()
 
-  def getThingDirection(self, p1, p2):
-    x, y = p2[0]-p1[0], p2[1]-p1[1]
-    if y > x:
-        if y > -x:
-            return Directions.NORTH
-        else:
-            return Directions.WEST
-    else:
-        if y > -x:
-            return Directions.EAST
-        else:
-            return Directions.SOUTH
 
-    return
-
-  def closestGhost(self, state):
-    pos = state.getPacmanPosition()
-    gpositions = state.getGhostPositions()
-    gdists = [util.manhattanDistance(pos, gpos) for gpos in gpositions]
-    idx, closestGhostDist = min(enumerate(gdists), key=lambda p: p[1])
-    if closestGhostDist > 4.4:
-        closestGhostDist = 'Far'
-    # closestGhostDir = 0 # f(pos, gpositions[idx])
-    return gpositions[idx], closestGhostDist
-
-  def getSimplifiedState(self, state):
-    remainingFood = state.getNumFood()
-    if remainingFood > 10:
-        remainingFood = "ALOT"
-    pos = state.getPacmanPosition()
-    cfood = closestFood(pos, state.getFood(), state.getWalls(), withPos=True)
-    if cfood is None:
-        closestFoodDist = None
-        closestFoodDir = None
-    else:
-        closestFoodDist = cfood[1]
-        closestFoodDir = self.getThingDirection(pos, cfood[0])
-        if closestFoodDist > 4.5:
-            closestFoodDir = 'Far'
-    cghost = self.closestGhost(state)
-    if cghost is None:
-        closestGhostDist = None
-        closestGhostDir = None
-    else:
-        closestGhostDist = cghost[1]
-        closestGhostDir = self.getThingDirection(pos, cghost[0])
-    result = (remainingFood, closestFoodDist, 'foodOn:', closestFoodDir, closestGhostDist, 'ghostOn:', closestGhostDir, 'goOn:')
-    return result
-    # return self.ext.getFeatures(state, action)
 
   def getQValue(self, state, action):
     """
@@ -90,7 +42,7 @@ class QLearningAgent(ReinforcementAgent):
       a state or (state,action) tuple 
     """
     "*** YOUR CODE HERE ***"
-    simplified_state = self.getSimplifiedState(state)
+    simplified_state = state.getSimplifiedState()
     if (simplified_state, action) not in self.Q:
         return 0.0
     return self.Q[(simplified_state, action)]
@@ -158,7 +110,7 @@ class QLearningAgent(ReinforcementAgent):
       it will be called on your behalf
     """
     "*** YOUR CODE HERE ***"
-    self.Q[(self.getSimplifiedState(state), action)] = self.getQValue(state, action) + self.alpha * (reward + self.gamma * self.getValue(nextState) - self.getQValue(state, action))
+    self.Q[(state.getSimplifiedState(), action)] = self.getQValue(state, action) + self.alpha * (reward + self.gamma * self.getValue(nextState) - self.getQValue(state, action))
     
 class PacmanQAgent(QLearningAgent):
   "Exactly the same as QLearningAgent, but with different default parameters"

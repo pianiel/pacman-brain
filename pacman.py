@@ -31,6 +31,7 @@ from game import Directions
 from game import Actions
 from util import nearestPoint
 from util import manhattanDistance
+from featureExtractors import closestFeatures
 import util, layout
 import sys, types, time, random, os
 
@@ -97,7 +98,15 @@ class GameState:
     # Book keeping
     state.data._agentMoved = agentIndex
     state.data.score += state.data.scoreChange
+
+    self._simplified_state = None
     return state
+
+  def getSimplifiedState(self):
+    if self._simplified_state is None:
+        self._genSimplifiedState()
+
+    return self._simplified_state
 
   def getLegalPacmanActions( self ):
     return self.getLegalActions( 0 )
@@ -201,6 +210,8 @@ class GameState:
     else:
       self.data = GameStateData()
 
+    self._simplified_state = None
+
   def deepCopy( self ):
     state = GameState( self )
     state.data = self.data.deepCopy()
@@ -227,6 +238,32 @@ class GameState:
     Creates an initial game state from a layout array (see layout.py).
     """
     self.data.initialize(layout, numGhostAgents)
+
+  def _genSimplifiedState(self):
+    remainingFood = self.getNumFood()
+    if remainingFood > 10:
+        remainingFood = "ALOT"
+
+    stats = closestFeatures(self)
+    (closestFoodDist, closestFoodDir) = stats['food']
+    (closestGhostDist, closestGhostDir) = stats['ghost']
+    (closestCapsuleDist, closestCapsuleDir) = stats['capsule']
+
+    if closestFoodDist > 4.5:
+        closestFoodDir = 'Far'
+
+    if closestCapsuleDist > 4.0:
+        closestCapsuleDist = "Far"
+
+    areGhostScared = False
+    if self.getNumAgents() > 1:
+        areGhostScared = self.getGhostState(1).scaredTimer > 0
+
+    self._simplified_state = (remainingFood, closestFoodDist, areGhostScared, 'foodOn:', closestFoodDir, closestGhostDist,
+              'ghostOn:', closestGhostDir, closestCapsuleDist, 'capsuleOn:', closestCapsuleDir, 'goOn:')
+
+
+    # return self.ext.getFeatures(state, action)
 
 ############################################################################
 #                     THE HIDDEN SECRETS OF PACMAN                         #

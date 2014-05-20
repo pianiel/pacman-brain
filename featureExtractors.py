@@ -1,6 +1,7 @@
 "Feature extractors for Pacman game states"
 
 from game import Directions, Actions
+from collections import deque
 import util
 
 class FeatureExtractor:  
@@ -43,6 +44,80 @@ def closestFood(pos, food, walls, withPos=False):
   # no food found
   return None
 
+def closestFeatures(state):
+    (px, py) = state.getPacmanPosition()
+    ghost_positions = state.getGhostPositions()
+    food = state.getFood()
+    capsules_positions = state.getCapsules()
+    walls = state.getWalls()
+
+    food_dist = None
+    food_dir = None
+    ghost_dist = None
+    ghost_dir = None
+    capsule_dist = None
+    capsule_dir = None
+
+    look_for_food = state.getNumFood > 0
+    look_for_ghost = state.getNumAgents > 1
+    look_for_capsule = len(state.getCapsules()) > 0
+
+    to_visit = deque()
+    to_visit.append((px, py, 0, None))
+    visited = set()
+
+    while (look_for_food or look_for_ghost or look_for_capsule) and to_visit:
+        # dirr, because dir is a builtin function...
+        x, y, dist, dirr = to_visit.popleft()
+        visited.add((x, y))
+
+        if look_for_food:
+            if food[x][y]:
+                food_dist = dist
+                food_dir = dirr
+                look_for_food = False
+
+        if look_for_ghost:
+            if (x, y) in ghost_positions:
+                ghost_dist = dist
+                ghost_dir = dirr
+                look_for_ghost = False
+
+        if look_for_capsule:
+            if (x, y) in capsules_positions:
+                capsule_dist = dist
+                capsule_dir = dirr
+                look_for_capsule = False
+
+        nbrs = Actions.getLegalNeighbors((x, y), walls)
+        for (nbr_x, nbr_y) in nbrs:
+            if (nbr_x, nbr_y) in visited:
+                continue
+
+            if dirr is None:
+                nbr_dir = getThingDirection((x, y), (nbr_x, nbr_y))
+
+            next_dir = dirr is not None and dirr or nbr_dir
+            to_visit.append((nbr_x, nbr_y, dist + 1, next_dir))
+
+    return {'food': (food_dist, food_dir),
+            'ghost': (ghost_dist, ghost_dir),
+            'capsule': (capsule_dist, capsule_dir)}
+
+def getThingDirection(p1, p2):
+    x, y = p2[0]-p1[0], p2[1]-p1[1]
+    if y > x:
+        if y > -x:
+            return Directions.NORTH
+        else:
+            return Directions.WEST
+    else:
+        if y > -x:
+            return Directions.EAST
+        else:
+            return Directions.SOUTH
+
+    return
 
 class SimpleExtractor(FeatureExtractor):
   """
