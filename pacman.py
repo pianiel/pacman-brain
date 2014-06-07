@@ -243,20 +243,32 @@ class GameState:
     remainingFood = self.getNumFood()
     if remainingFood > 10:
         remainingFood = "ALOT"
+    else:
+        remainingFood = "FEW"
 
     stats = closestFeatures(self)
     (closestFoodDist, closestFoodDir) = stats['food']
     (closestGhostDist, closestGhostDir) = stats['ghost']
     (closestCapsuleDist, closestCapsuleDir) = stats['capsule']
 
+    
     if closestFoodDist > 4.5:
-        closestFoodDir = 'Far'
+        closestFoodDist = 'Far'
+    elif closestFoodDist > 1.0:
+        closestFoodDist = 'Close'
 
-    if closestCapsuleDist > 4.0:
+    if closestCapsuleDist > 4.5:
         closestCapsuleDist = "Far"
+    elif closestCapsuleDist > 1.0:
+        closestCapsuleDist = 'Close'
+
+    if closestGhostDist > 4.5:
+        closestGhostDist = "Far"
+    elif closestGhostDist > 1.0:
+        closestGhostDist = 'Close'
 
     areGhostScared = False
-    if self.getNumAgents() > 1:
+    if self.getNumAgents() > 1: # a co jak sa 2 albo wiecej duchy i jeden jest skitrany a drugi nie? :<
         areGhostScared = self.getGhostState(1).scaredTimer > 0
 
     self._simplified_state = (remainingFood, closestFoodDist, areGhostScared, 'foodOn:', closestFoodDir, closestGhostDist,
