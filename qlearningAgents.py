@@ -30,7 +30,11 @@ class QLearningAgent(ReinforcementAgent):
     ReinforcementAgent.__init__(self, **args)
 
     "*** YOUR CODE HERE ***"
-    self.Q = {}
+    if 'Q' in args:
+        self.Q = args['Q']
+        print 'qtable from file size:', len(self.Q.items())
+    else:
+        self.Q = {}
     # self.ext = SimpleExtractor()
 
 

@@ -31,6 +31,7 @@ from game import Directions
 from game import Actions
 from util import nearestPoint
 from util import manhattanDistance
+from qTableLoader import loadQTable
 from featureExtractors import closestFeatures
 import util, layout
 import sys, types, time, random, os
@@ -535,6 +536,8 @@ def readCommand( argv ):
                     help=default('How many episodes are training (suppresses output)'), default=0)
   parser.add_option('--frameTime', dest='frameTime', type='float',
                     help=default('Time to delay between frames; <0 means keyboard'), default=0.1)
+  parser.add_option('--loadqtable', dest='loadQTable', action='store_true',
+                    help=default('Read Qtable from q.log'), default=False)
 
   options, otherjunk = parser.parse_args(argv)
   if len(otherjunk) != 0:
@@ -555,6 +558,9 @@ def readCommand( argv ):
   if options.numTraining > 0:
     args['numTraining'] = options.numTraining
     if 'numTraining' not in agentOpts: agentOpts['numTraining'] = options.numTraining
+  if options.loadQTable:
+      qtable = loadQTable('q.log')
+      agentOpts['Q'] = qtable
   pacman = pacmanType(**agentOpts) # Instantiate Pacman with agentArgs
   args['pacman'] = pacman
 
@@ -672,7 +678,7 @@ def runGames( layout, pacman, ghosts, display, numGames, record, numTraining = 0
     print 'Record:       ', ', '.join([ ['Loss', 'Win'][int(w)] for w in wins])
     with open("q.log",'w') as f:
       for k,v in sorted(pacman.Q.items(), key = lambda x: x[1]):
-          f.write(str(k) + ":\t" + str(v) + "\n")
+          f.write(str(k) + "\t" + str(v) + "\n")
 
   return games
 

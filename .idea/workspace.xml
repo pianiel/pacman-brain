@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8ea0de8-9e38-4a59-bb05-630f92c3df89" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qTableLoader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learningAgents.py" afterPath="$PROJECT_DIR$/learningAgents.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pacman.py" afterPath="$PROJECT_DIR$/pacman.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qlearningAgents.py" afterPath="$PROJECT_DIR$/qlearningAgents.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pacman-brain.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +32,7 @@
       <file leaf-file-name="pacman.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pacman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="607" column="14" selection-start="21574" selection-end="21574" vertical-scroll-proportion="0.0" vertical-offset="8500" max-vertical-offset="9765">
+            <state line="560" column="23" selection-start="19927" selection-end="19927" vertical-scroll-proportion="0.0" vertical-offset="8342" max-vertical-offset="11312">
               <folding>
                 <element signature="e#1329#1359#0" expanded="true" />
               </folding>
@@ -36,23 +40,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="q.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/q.log">
+      <file leaf-file-name="qTableLoader.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qTableLoader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9083" column="0" selection-start="760850" selection-end="760850" vertical-scroll-proportion="0.0" vertical-offset="135491" max-vertical-offset="136335">
+            <state line="12" column="84" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qlearningAgents.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="q.log" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/q.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="123" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.21774194" vertical-offset="0" max-vertical-offset="129780">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qlearningAgents.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qlearningAgents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="0" selection-start="1594" selection-end="1594" vertical-scroll-proportion="1.101083" vertical-offset="0" max-vertical-offset="3000">
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#6317#7462#0" expanded="false" />
-              </folding>
+            <state line="1" column="35" selection-start="54" selection-end="54" vertical-scroll-proportion="-0.6296296" vertical-offset="0" max-vertical-offset="3315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="learningAgents.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learningAgents.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="96" selection-start="4699" selection-end="4699" vertical-scroll-proportion="0.0" vertical-offset="2416" max-vertical-offset="4464">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,14 +79,8 @@
       <file leaf-file-name="util.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="2" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="6345">
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#127#511#0" expanded="false" />
-                <element signature="e#528#996#0" expanded="false" />
-                <element signature="e#1023#1783#0" expanded="false" />
-                <element signature="e#1835#2494#0" expanded="false" />
-              </folding>
+            <state line="110" column="2" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="7395">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,7 +88,7 @@
       <file leaf-file-name="featureExtractors.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/featureExtractors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="44" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1320">
+            <state line="70" column="44" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2460">
               <folding />
             </state>
           </provider>
@@ -84,25 +97,8 @@
       <file leaf-file-name="game.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="265" column="0" selection-start="7140" selection-end="7140" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="4950">
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#252#739#0" expanded="false" />
-                <element signature="e#1204#2640#0" expanded="false" />
-                <element signature="e#2662#3723#0" expanded="false" />
-                <element signature="e#3739#6851#0" expanded="false" />
-                <element signature="e#6885#7027#0" expanded="false" />
-                <element signature="e#9635#13512#0" expanded="false" />
-                <element signature="e#9692#10232#0" expanded="false" />
-                <element signature="e#10262#10513#0" expanded="false" />
-                <element signature="e#10563#10686#0" expanded="false" />
-                <element signature="e#11106#11451#0" expanded="false" />
-                <element signature="e#11480#12324#0" expanded="false" />
-                <element signature="e#12376#12466#0" expanded="false" />
-                <element signature="e#12500#12656#0" expanded="false" />
-                <element signature="e#12692#12863#0" expanded="false" />
-                <element signature="e#12919#13512#0" expanded="false" />
-              </folding>
+            <state line="634" column="16" selection-start="18581" selection-end="18586" vertical-scroll-proportion="-11.518518" vertical-offset="11047" max-vertical-offset="12312">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,16 +118,18 @@
       <list>
         <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/featureExtractors.py" />
-        <option value="$PROJECT_DIR$/pacman.py" />
-        <option value="$PROJECT_DIR$/q.log" />
         <option value="$PROJECT_DIR$/qlearningAgents.py" />
+        <option value="$PROJECT_DIR$/pacman.py" />
+        <option value="$PROJECT_DIR$/learningAgents.py" />
+        <option value="$PROJECT_DIR$/qTableLoader.py" />
+        <option value="$PROJECT_DIR$/q.log" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
+    <option name="x" value="55" />
     <option name="y" value="24" />
-    <option name="width" value="932" />
+    <option name="width" value="1865" />
     <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -160,7 +158,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -179,26 +176,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pacman-brain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pacman-brain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -210,7 +194,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.learning pacman 4000times smallClassic">
+  <component name="RunManager" selected="Python.testing pacman 3times smallgrid">
     <configuration default="false" name="manual pacman" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -224,6 +208,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pacman-brain" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pacman.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="qTableLoader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pacman-brain" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qTableLoader.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -383,7 +385,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pacman-brain" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pacman.py" />
-      <option name="PARAMETERS" value="-p PacmanQAgent -x 20 -n 22 -l smallGrid" />
+      <option name="PARAMETERS" value="-p PacmanQAgent -x 20 -n 22 -l smallGrid --loadqtable" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -428,7 +430,7 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="learning pacman 2000times smallgrid" type="PythonConfigurationType" factoryName="Python">
+    <configuration default="false" name="testing pacman 3times smallgrid" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -441,7 +443,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pacman-brain" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pacman.py" />
-      <option name="PARAMETERS" value="-p PacmanQAgent -x 2000 -n 2010 -l smallGrid" />
+      <option name="PARAMETERS" value="-p PacmanQAgent -n 3 -l smallGrid --loadqtable" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -482,23 +484,42 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="8">
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Python.learning pacman 1000times smallgrid" />
       <item index="1" class="java.lang.String" itemvalue="Python.learning pacman 20 trains" />
       <item index="2" class="java.lang.String" itemvalue="Python.learning pacman 2000times smallClassic" />
       <item index="3" class="java.lang.String" itemvalue="Python.learning pacman 2000times testClassic" />
-      <item index="4" class="java.lang.String" itemvalue="Python.learning pacman 2000times smallgrid" />
+      <item index="4" class="java.lang.String" itemvalue="Python.testing pacman 3times smallgrid" />
       <item index="5" class="java.lang.String" itemvalue="Python.learning pacman 2000times smallClassic 1 ghost" />
       <item index="6" class="java.lang.String" itemvalue="Python.learning pacman 4000times smallClassic" />
       <item index="7" class="java.lang.String" itemvalue="Python.manual pacman" />
+      <item index="8" class="java.lang.String" itemvalue="Python.qTableLoader" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.manual pacman" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.qTableLoader" />
+        <item index="1" class="java.lang.String" itemvalue="Python.manual pacman" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d8ea0de8-9e38-4a59-bb05-630f92c3df89" name="Default" comment="" />
@@ -508,22 +529,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="24" width="932" height="1176" extended-state="4" />
+    <frame x="55" y="24" width="1865" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19098713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19088472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19351852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30415162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -549,40 +570,47 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pacman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="607" column="14" selection-start="21427" selection-end="21427" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10515">
+          <folding>
+            <element signature="e#1329#1359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qlearningAgents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="0" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="2865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="2" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="7395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/featureExtractors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="44" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="0" selection-start="7140" selection-end="7140" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="4665">
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#252#739#0" expanded="false" />
-            <element signature="e#1204#2640#0" expanded="false" />
-            <element signature="e#2662#3723#0" expanded="false" />
-            <element signature="e#3739#6851#0" expanded="false" />
-            <element signature="e#6885#7027#0" expanded="false" />
-            <element signature="e#9635#13512#0" expanded="false" />
-            <element signature="e#9692#10232#0" expanded="false" />
-            <element signature="e#10262#10513#0" expanded="false" />
-            <element signature="e#10563#10686#0" expanded="false" />
-            <element signature="e#11106#11451#0" expanded="false" />
-            <element signature="e#11480#12324#0" expanded="false" />
-            <element signature="e#12376#12466#0" expanded="false" />
-            <element signature="e#12500#12656#0" expanded="false" />
-            <element signature="e#12692#12863#0" expanded="false" />
-            <element signature="e#12919#13512#0" expanded="false" />
-          </folding>
+        <state line="265" column="0" selection-start="7140" selection-end="7140" vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="10305">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="2" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="6345">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#127#511#0" expanded="false" />
-            <element signature="e#528#996#0" expanded="false" />
-            <element signature="e#1023#1783#0" expanded="false" />
-            <element signature="e#1835#2494#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -593,29 +621,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q.log">
+    <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9083" column="0" selection-start="760850" selection-end="760850" vertical-scroll-proportion="0.0" vertical-offset="135491" max-vertical-offset="136335">
+        <state line="634" column="16" selection-start="18581" selection-end="18586" vertical-scroll-proportion="-11.518518" vertical-offset="11047" max-vertical-offset="12312">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learningAgents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="96" selection-start="4699" selection-end="4699" vertical-scroll-proportion="0.0" vertical-offset="2416" max-vertical-offset="4464">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pacman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="607" column="14" selection-start="21574" selection-end="21574" vertical-scroll-proportion="0.0" vertical-offset="8500" max-vertical-offset="9765">
+        <state line="560" column="23" selection-start="19927" selection-end="19927" vertical-scroll-proportion="0.0" vertical-offset="8342" max-vertical-offset="11312">
           <folding>
             <element signature="e#1329#1359#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/qTableLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="84" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/qlearningAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="1594" selection-end="1594" vertical-scroll-proportion="1.101083" vertical-offset="0" max-vertical-offset="3000">
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#6317#7462#0" expanded="false" />
-          </folding>
+        <state line="1" column="35" selection-start="54" selection-end="54" vertical-scroll-proportion="-0.6296296" vertical-offset="0" max-vertical-offset="3315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/q.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="123" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.21774194" vertical-offset="0" max-vertical-offset="129780">
+          <folding />
         </state>
       </provider>
     </entry>
